@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+*{
+    font-family: 'Titillium Web', sans-serif;
+}
+body{
+    background-image: url("images/111756-monochrome_mode-line-illustration-angle-triangle-5120x2880.jpg");
+}
+
+/*@import url('https://fonts.googleapis.com/css?family=Titillium+Web');*/
+/*@import url('https://fonts.googleapis.com/css?family=Anton');*/
+/**{*/
+/*    font-family: 'Titillium Web', sans-serif;*/
+/*}*/

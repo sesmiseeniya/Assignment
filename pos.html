@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/css/bootstrap.css">
+    <link rel="stylesheet" href="css/css/bootstrap.min.css">
+    <title>POS - Framework</title>
+</head>
+<body>
+<div class="jumbotron">
+    <h2>Customer</h2>
+    <div class="panel-heading ">
+    </div>
+
+</div>
+
+<div class="btn-group" style=" float: right; margin-top: -50px;">
+    <button type="button" class="btn btn-info nb" data-toggle="modal" data-target="#myModal">New Customer</button>
+    <button onclick="viewAllCus()" class="btn btn-warning nb">View All Customer</button>
+</div>
+
+<div class="container">
+<div class="card bg-primary">
+    <div id="Customer" class="cc" style="display: block">
+        <div class="jumbotron dis">
+
+            <div class="row">
+
+                <div class="col-md-6 ">
+
+                    <div class="panel panel-primary pad" id="cusPanel">
+                        <div class="panel-heading ">
+                            <h3 class="panel-title">Customer Search</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <input id="cse" class="form-control" placeholder="Input Name/Nic/Tp Here">
+                            </div>
+                            <div class="form-group form-inline">
+                                <button onclick="cusSearch()" class="btn btn-primary">Search</button>
+
+                                <select id="cuscus" class="form-control" style="width: 100px;">
+                                    <option>Name</option>
+                                    <option>Nic</option>
+                                    <option>Tp</option>
+
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button class="btn btn-danger">Delete</button>
+                    <button class="btn btn-warning">Edit</button>
+                    <button class="btn btn-info">Details</button>
+                    <button class="btn btn-success">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--    <button class="btn btn-danger">Delete</button>-->
+<!--    <button class="btn btn-warning">Edit</button>-->
+<!--    <button class="btn btn-info">Details</button>-->
+<!--    <button class="btn btn-success">Clear</button>-->
+
+    <div class="row temp">
+
+        <div class="col-md-12" style="height:180px; overflow-y: scroll">
+
+            <table class="table table-hover table-bordered tabl" id="tabl">
+                <thead class="bg-primary">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Tp</th>
+                    <th>Salary</th>
+                <tr>
+                </thead>
+                <tbody id="tbo">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+</html>

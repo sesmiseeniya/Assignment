@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="css/css/bootstrap.css">
+    <link rel="stylesheet" href="css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="itemcss.css">
+    <title>Item Form</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #95999c">
+    <a class="navbar-brand" href="#">Aman resort</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="newpos.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="orderForm.html">Orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="itemForm.html" tabindex="-1" aria-disabled="true">Items</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Other
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="customerform.html">Customer</a>
+                    <a class="dropdown-item" href="#">Employees</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="index.html">Back</a>
+                </div>
+
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn my-2 my-sm-0" type="submit"><img src="images/icons8_Search_50px_4.png" width="50%"/>
+            </button>
+        </form>
+    </div>
+</nav>
+<div class="container">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-sm-6 col-xs-12">
+                <div class="bg-light main-title">
+                    <h2><i class= "fas fa-cubes"></i> Items</h2>
+                </div>
+                <div class="front-nav-bar ">
+                    Home > <b>Items</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron pt-4 mb-3">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header" style="background-color: #95999c">Item Search</div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Input ItemName/Code/Qty Here">
+                            </div>
+                            <div class="form-group form-inline">
+                                <button class="btn btn-success mb-2">Search</button>
+                                &nbsp;&nbsp;&nbsp;
+                                <select class="form-control mb-2">
+                                    <option>Name</option>
+                                    <option>Code</option>
+                                    <option>Qty</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 menu-button-group">
+                    <div class="center-on-lg">
+                        <div class="btn-group float-right mt-lg-0 mb-3">
+                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">New Items</button>
+                            <button type="button" class="btn btn-warning">View All Items</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog" role="document">
+
+
+                        <div class="modal-content">
+                            <div class="modal-header" style="background-color: #95999c">
+                                <h4 class="modal-title">New Item</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group ">
+                                    <label for="name">Item Name :</label>
+                                    <input id="ItemTxt" type="text" class="form-control">
+                                    <label for="name">Item Code :</label>
+                                    <input id="ItemTxt" type="text" class="form-control">
+                                    <label for="name">Qty :</label>
+                                    <input id="txtQty" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" onclick="customerAdd()" class="btn btn-danger">Save</button>
+                                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-action-buttons m-3">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-warning">Edit</button>
+                    <button type="button" class="btn btn-info">Details</button>
+                    <button type="button" class="btn btn-success">Clear</button>
+                </div>
+            </div>
+            <div class="col-md-12 mt-4" style="height:180px; overflow-y: scroll">
+                <table class="table table-bordered">
+                    <thead style="background: #95999c">
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Item Code</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody class="bg-light">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div class="footer-text btn-light text-center">Developed by Sesmi Seeniya @ IJSE 49 Batch</div>
+
+<body>
+
+<script src="css/js/jquery-3.4.1.min.js"></script>
+<script src="css/js/bootstrap.min.js"></script>
+</body>
+</html>
